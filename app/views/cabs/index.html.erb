@@ -1,0 +1,14 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<h1>Cabs Available</h1>
+
+<%= scatter_chart [
+                          {
+                            name: 'You',
+                            data: [[@user.location.latitude, @user.location.longitude]]
+                          },
+                          {
+                            name: 'Cabs',
+                            data: @cab_coordinates
+                          }
+                  ]
+%>

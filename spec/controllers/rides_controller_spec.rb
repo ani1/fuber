@@ -7,7 +7,7 @@ RSpec.describe RidesController, type: :controller do
       expect(get: '/rides/start').to route_to(controller: 'rides', action: 'start')
     end
 
-    it 'routes GET rides/stop/:id to RidesController#stop' do
+    it 'routes GET rides/:id/stop to RidesController#stop' do
       expect(get: "/rides/#{1}/stop").to route_to(controller: 'rides', action: 'stop', id: '1')
     end
   end
